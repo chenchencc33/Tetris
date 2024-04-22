@@ -34,7 +34,7 @@ int assign(int x, int y, int type, int rotation)
         {
             int dx = x + i % 4;
             int dy = y + i / 4;
-            if (dx < 10 && dx >= 0 && dy < 20 && dy >= 0) sum += flip(dy, dx);
+            if (dx < 10 && dx >= 0 && dy < 22 && dy >= 0) sum += flip(dy, dx);
         }
     }
     return sum;
@@ -64,7 +64,7 @@ int testAndCreate(int type, tetris_block *input)
 
     // Test for any existing lines to erase.
     int count = 0;
-    for (count = 0; count < 20; count++)
+    for (count = 0; count < 22; count++)
     {
         if (testLine(count) == 1)
         {

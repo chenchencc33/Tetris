@@ -7,7 +7,6 @@
 #include <sys/ioctl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-
 #include "Tetris.h"
 
 int blocks[22][10];

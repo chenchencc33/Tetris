@@ -2,7 +2,6 @@
 #define _TOOL_H
 
 extern void emptyBlocks(void);
-extern void printBlocks(void);
 extern int flip(int, int);
 extern int testLine(int);
 extern int* getShape(int, int);

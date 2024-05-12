@@ -21,14 +21,14 @@ int flip(int r, int c)
 }
 
 // Test a line and return if the line is connected or not.
-int testLine(int r)
+int testLine(int row)
 {
-    int c = 0;
-    for (c = 0; c < 10; c++)
+    int col = 0;
+    for (col = 0; col < 10; col++)
     {
-        if (blocks[r][c] == 0) return 0;
+        if (blocks[row][col] == 0) return 0;
     }
-    for (c = r; c > 0; c--) memcpy(blocks[c], blocks[c - 1], sizeof(int) * 10);
+    for (col = row; col > 0; col--) memcpy(blocks[col], blocks[col - 1], sizeof(int) * 10);
     memset(blocks, '\0', sizeof(int) * 10);
     return 1;
 }

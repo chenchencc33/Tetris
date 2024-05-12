@@ -123,6 +123,7 @@ int* getShape(int type, int rotation)
     return r;
 }
 
+// Send the value to vla as a signal.
 // Set the score value.
 void set_score(int tetris_fd, const int score)
 {

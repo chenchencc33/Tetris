@@ -10,28 +10,9 @@
 
 #include "Tetris.h"
 
-int blocks[20][10];
+int blocks[22][10];
 
 void emptyBlocks() { memset(blocks, '\0', 240 * sizeof(int)); }
-
-// For debug only.
-void printBlocks()
-{
-    printf("--------------\n");
-    int i = 0;
-    for (i = 0; i < 200; i++)
-    {
-        int px = i % 10;
-        int py = i / 10;
-        if (px == 0) printf("|");
-        if (blocks[py][px] == 1) printf("*");
-        else if (blocks[py][px] == 0) printf(" ");
-        else printf("%d", blocks[py][px]);
-        if (px == 9) printf("|\n");
-    }
-    printf("--------------\n");
-}
-
 
 // Flip the target block and return the flipped value.
 int flip(int r, int c)
